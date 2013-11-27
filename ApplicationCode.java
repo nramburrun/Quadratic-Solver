@@ -45,11 +45,21 @@ public class MainActivity extends Activity {
 			beta = ((b*b) - (4*a*c));
 			alpha = Math.sqrt(beta);
 			
-			gamma1 = (-b + alpha)/(2*a);
-			gamma2 = (-b - alpha)/(2*a);
 			
-			answer1.setText(Double.toString(gamma1));
-			answer2.setText(Double.toString(gamma2));
+			if(beta < 0)
+			{
+				string complex = "i";
+				
+			}  
+			
+			else
+			{
+				gamma1 = (-b + alpha)/(2*a);
+				gamma2 = (-b - alpha)/(2*a);
+			
+				answer1.setText(Double.toString(gamma1));
+				answer2.setText(Double.toString(gamma2));
+			}
 		}
 		
 	}
